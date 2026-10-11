@@ -9,26 +9,19 @@
     <meta name="author" content="Multi System Software">
     <meta name="theme-color" content="#3DAD57">
     
-    <!-- Open Graph -->
     <meta property="og:title" content="Multi System Software | Business Automation Solutions">
     <meta property="og:description" content="Complete software solutions for Flour Mills, Rice Mills, Fuel Pumps, Ginning Mills, and Grain Trading.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://multisystemsoftware.com">
-    <meta property="og:image" content="https://raw.githubusercontent.com/abdullah-tanveer-2008/MultiSystemSoftware/main/logo.png">
+    <meta property="og:image" content="images/logo.png">
     
-    <!-- Favicon (GitHub logo) -->
-    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/abdullah-tanveer-2008/MultiSystemSoftware/main/logo.png">
-    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/abdullah-tanveer-2008/MultiSystemSoftware/main/logo.png">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="apple-touch-icon" href="images/logo.png">
     
-    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -37,7 +30,7 @@
 <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
     <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="#home">
-            <img src="https://raw.githubusercontent.com/abdullah-tanveer-2008/MultiSystemSoftware/main/logo.png" alt="Multi System Software Logo" class="brand-logo">
+            <img src="images/logo.png" alt="Multi System Software Logo" class="brand-logo">
             <span class="brand-text">Multi System Software</span>
         </a>
         
@@ -109,7 +102,7 @@
             </div>
             <div class="col-lg-6 hero-visual">
                 <div class="hero-image-wrapper">
-                    <img src="https://raw.githubusercontent.com/abdullah-tanveer-2008/MultiSystemSoftware/main/hero-dashboard.jpg" alt="Business Dashboard" class="img-fluid hero-img">
+                    <img src="images/hero-dashboard.jpg" alt="Business Dashboard" class="img-fluid hero-img">
                     <div class="floating-card card-1">
                         <i class="bi bi-graph-up-arrow"></i>
                         <div>
@@ -161,11 +154,12 @@
         </div>
 
         <div class="row g-4">
+
             <!-- Flour M. -->
             <div class="col-md-6 col-lg-4">
                 <div class="software-card">
                     <div class="card-image">
-                        <img src="https://raw.githubusercontent.com/abdullah-tanveer-2008/MultiSystemSoftware/main/flour-mill.jpg" alt="Flour Mills Software">
+                        <img src="images/flour-mill.jpg" alt="Flour Mills Software">
                         <span class="card-badge">Popular</span>
                     </div>
                     <div class="card-body">
@@ -180,10 +174,17 @@
                             <li><i class="bi bi-check-circle-fill"></i> Sales & Purchase Contracts</li>
                         </ul>
                         <div class="card-actions">
-                            <a href="https://wa.me/923216714824?text=Flour%20M%20ka%20demo%20chahiye" 
-                               class="btn btn-primary-custom w-100" target="_blank" rel="noopener">
-                                <i class="bi bi-play-circle me-1"></i> View Demo
-                            </a>
+                            <div class="card-buttons-row">
+                                <a href="https://wa.me/923216714824?text=Flour%20M%20ka%20demo%20chahiye" 
+                                   class="btn-card" target="_blank" rel="noopener">
+                                    <i class="bi bi-send-fill"></i> Request Demo
+                                </a>
+                                <button type="button" class="btn-card" 
+                                        data-bs-toggle="modal" data-bs-target="#presentationModal"
+                                        data-software="flour-mill">
+                                    <i class="bi bi-images"></i> Presentation
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -193,7 +194,7 @@
             <div class="col-md-6 col-lg-4">
                 <div class="software-card">
                     <div class="card-image">
-                        <img src="https://raw.githubusercontent.com/abdullah-tanveer-2008/MultiSystemSoftware/main/rice-mill.jpg" alt="Rice Mills Software">
+                        <img src="images/rice-mill.jpg" alt="Rice Mills Software">
                     </div>
                     <div class="card-body">
                         <div class="card-icon"><i class="bi bi-basket-fill"></i></div>
@@ -207,10 +208,17 @@
                             <li><i class="bi bi-check-circle-fill"></i> Sales & Purchase Contracts</li>
                         </ul>
                         <div class="card-actions">
-                            <a href="https://wa.me/923216714824?text=Rice%20M%20ka%20demo%20chahiye" 
-                               class="btn btn-primary-custom w-100" target="_blank" rel="noopener">
-                                <i class="bi bi-play-circle me-1"></i> View Demo
-                            </a>
+                            <div class="card-buttons-row">
+                                <a href="https://wa.me/923216714824?text=Rice%20M%20ka%20demo%20chahiye" 
+                                   class="btn-card" target="_blank" rel="noopener">
+                                    <i class="bi bi-send-fill"></i> Request Demo
+                                </a>
+                                <button type="button" class="btn-card" 
+                                        data-bs-toggle="modal" data-bs-target="#presentationModal"
+                                        data-software="rice-mill">
+                                    <i class="bi bi-images"></i> Presentation
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -220,7 +228,7 @@
             <div class="col-md-6 col-lg-4">
                 <div class="software-card">
                     <div class="card-image">
-                        <img src="https://raw.githubusercontent.com/abdullah-tanveer-2008/MultiSystemSoftware/main/fuel-pump.jpg" alt="Fuel Pump Software">
+                        <img src="images/fuel-pump.jpg" alt="Fuel Pump Software">
                     </div>
                     <div class="card-body">
                         <div class="card-icon"><i class="bi bi-fuel-pump-fill"></i></div>
@@ -234,10 +242,17 @@
                             <li><i class="bi bi-check-circle-fill"></i> Stock Management</li>
                         </ul>
                         <div class="card-actions">
-                            <a href="https://wa.me/923216714824?text=Fuel%20M%20ka%20demo%20chahiye" 
-                               class="btn btn-primary-custom w-100" target="_blank" rel="noopener">
-                                <i class="bi bi-play-circle me-1"></i> View Demo
-                            </a>
+                            <div class="card-buttons-row">
+                                <a href="https://wa.me/923216714824?text=Fuel%20M%20ka%20demo%20chahiye" 
+                                   class="btn-card" target="_blank" rel="noopener">
+                                    <i class="bi bi-send-fill"></i> Request Demo
+                                </a>
+                                <button type="button" class="btn-card" 
+                                        data-bs-toggle="modal" data-bs-target="#presentationModal"
+                                        data-software="fuel-m">
+                                    <i class="bi bi-images"></i> Presentation
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -247,7 +262,7 @@
             <div class="col-md-6 col-lg-4">
                 <div class="software-card">
                     <div class="card-image">
-                        <img src="https://raw.githubusercontent.com/abdullah-tanveer-2008/MultiSystemSoftware/main/seed-pro.jpg" alt="Seed Processing Software">
+                        <img src="images/seed-pro.jpg" alt="Seed Processing Software">
                     </div>
                     <div class="card-body">
                         <div class="card-icon"><i class="bi bi-flower1"></i></div>
@@ -261,10 +276,17 @@
                             <li><i class="bi bi-check-circle-fill"></i> Sales & Purchase Contracts</li>
                         </ul>
                         <div class="card-actions">
-                            <a href="https://wa.me/923216714824?text=Seed%20Pro%20ka%20demo%20chahiye" 
-                               class="btn btn-primary-custom w-100" target="_blank" rel="noopener">
-                                <i class="bi bi-play-circle me-1"></i> View Demo
-                            </a>
+                            <div class="card-buttons-row">
+                                <a href="https://wa.me/923216714824?text=Seed%20Pro%20ka%20demo%20chahiye" 
+                                   class="btn-card" target="_blank" rel="noopener">
+                                    <i class="bi bi-send-fill"></i> Request Demo
+                                </a>
+                                <button type="button" class="btn-card" 
+                                        data-bs-toggle="modal" data-bs-target="#presentationModal"
+                                        data-software="seed-pro">
+                                    <i class="bi bi-images"></i> Presentation
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -274,7 +296,7 @@
             <div class="col-md-6 col-lg-4">
                 <div class="software-card">
                     <div class="card-image">
-                        <img src="https://raw.githubusercontent.com/abdullah-tanveer-2008/MultiSystemSoftware/main/gin-master.jpg" alt="Ginning Mills Software">
+                        <img src="images/gin-master.jpg" alt="Ginning Mills Software">
                     </div>
                     <div class="card-body">
                         <div class="card-icon"><i class="bi bi-gear-wide-connected"></i></div>
@@ -288,10 +310,17 @@
                             <li><i class="bi bi-check-circle-fill"></i> Sales & Purchase Contracts</li>
                         </ul>
                         <div class="card-actions">
-                            <a href="https://wa.me/923216714824?text=Gin%20Master%20ka%20demo%20chahiye" 
-                               class="btn btn-primary-custom w-100" target="_blank" rel="noopener">
-                                <i class="bi bi-play-circle me-1"></i> View Demo
-                            </a>
+                            <div class="card-buttons-row">
+                                <a href="https://wa.me/923216714824?text=Gin%20Master%20ka%20demo%20chahiye" 
+                                   class="btn-card" target="_blank" rel="noopener">
+                                    <i class="bi bi-send-fill"></i> Request Demo
+                                </a>
+                                <button type="button" class="btn-card" 
+                                        data-bs-toggle="modal" data-bs-target="#presentationModal"
+                                        data-software="gin-master">
+                                    <i class="bi bi-images"></i> Presentation
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -301,7 +330,7 @@
             <div class="col-md-6 col-lg-4">
                 <div class="software-card">
                     <div class="card-image">
-                        <img src="https://raw.githubusercontent.com/abdullah-tanveer-2008/MultiSystemSoftware/main/easy-accounting.jpg" alt="Easy Accounting Software">
+                        <img src="images/easy-accounting.jpg" alt="Easy Accounting Software">
                     </div>
                     <div class="card-body">
                         <div class="card-icon"><i class="bi bi-calculator-fill"></i></div>
@@ -314,10 +343,17 @@
                             <li><i class="bi bi-check-circle-fill"></i> Easy to Use</li>
                         </ul>
                         <div class="card-actions">
-                            <a href="https://wa.me/923216714824?text=Easy%20Accounting%20ka%20demo%20chahiye" 
-                               class="btn btn-primary-custom w-100" target="_blank" rel="noopener">
-                                <i class="bi bi-play-circle me-1"></i> View Demo
-                            </a>
+                            <div class="card-buttons-row">
+                                <a href="https://wa.me/923216714824?text=Easy%20Accounting%20ka%20demo%20chahiye" 
+                                   class="btn-card" target="_blank" rel="noopener">
+                                    <i class="bi bi-send-fill"></i> Request Demo
+                                </a>
+                                <button type="button" class="btn-card" 
+                                        data-bs-toggle="modal" data-bs-target="#presentationModal"
+                                        data-software="easy-accounting">
+                                    <i class="bi bi-images"></i> Presentation
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -327,7 +363,7 @@
             <div class="col-md-6 col-lg-4">
                 <div class="software-card">
                     <div class="card-image">
-                        <img src="https://raw.githubusercontent.com/abdullah-tanveer-2008/MultiSystemSoftware/main/inventory-pro.jpg" alt="Inventory Management Software">
+                        <img src="images/inventory-pro.jpg" alt="Inventory Management Software">
                     </div>
                     <div class="card-body">
                         <div class="card-icon"><i class="bi bi-boxes"></i></div>
@@ -340,10 +376,17 @@
                             <li><i class="bi bi-check-circle-fill"></i> Reports & Analytics</li>
                         </ul>
                         <div class="card-actions">
-                            <a href="https://wa.me/923216714824?text=Inventory%20Pro%20ka%20demo%20chahiye" 
-                               class="btn btn-primary-custom w-100" target="_blank" rel="noopener">
-                                <i class="bi bi-play-circle me-1"></i> View Demo
-                            </a>
+                            <div class="card-buttons-row">
+                                <a href="https://wa.me/923216714824?text=Inventory%20Pro%20ka%20demo%20chahiye" 
+                                   class="btn-card" target="_blank" rel="noopener">
+                                    <i class="bi bi-send-fill"></i> Request Demo
+                                </a>
+                                <button type="button" class="btn-card" 
+                                        data-bs-toggle="modal" data-bs-target="#presentationModal"
+                                        data-software="inventory-pro">
+                                    <i class="bi bi-images"></i> Presentation
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -353,7 +396,7 @@
             <div class="col-md-6 col-lg-4">
                 <div class="software-card">
                     <div class="card-image">
-                        <img src="https://raw.githubusercontent.com/abdullah-tanveer-2008/MultiSystemSoftware/main/traders-pro.jpg" alt="Traders Software">
+                        <img src="images/traders-pro.jpg" alt="Traders Software">
                     </div>
                     <div class="card-body">
                         <div class="card-icon"><i class="bi bi-graph-up"></i></div>
@@ -366,14 +409,22 @@
                             <li><i class="bi bi-check-circle-fill"></i> Inventory Control</li>
                         </ul>
                         <div class="card-actions">
-                            <a href="https://wa.me/923216714824?text=Traders%20Pro%20ka%20demo%20chahiye" 
-                               class="btn btn-primary-custom w-100" target="_blank" rel="noopener">
-                                <i class="bi bi-play-circle me-1"></i> View Demo
-                            </a>
+                            <div class="card-buttons-row">
+                                <a href="https://wa.me/923216714824?text=Traders%20Pro%20ka%20demo%20chahiye" 
+                                   class="btn-card" target="_blank" rel="noopener">
+                                    <i class="bi bi-send-fill"></i> Request Demo
+                                </a>
+                                <button type="button" class="btn-card" 
+                                        data-bs-toggle="modal" data-bs-target="#presentationModal"
+                                        data-software="traders-pro">
+                                    <i class="bi bi-images"></i> Presentation
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </section>
@@ -428,7 +479,7 @@
             </div>
             <div class="col-lg-6">
                 <div class="about-image-wrapper">
-                    <img src="https://raw.githubusercontent.com/abdullah-tanveer-2008/MultiSystemSoftware/main/about-team.jpg" alt="Our Team" class="img-fluid rounded-4">
+                    <img src="images/about-team.jpg" alt="Our Team" class="img-fluid rounded-4">
                 </div>
             </div>
         </div>
@@ -534,7 +585,7 @@
         <div class="row g-4">
             <div class="col-lg-4 col-md-6">
                 <a class="navbar-brand d-flex align-items-center mb-3" href="#home">
-                    <img src="https://raw.githubusercontent.com/abdullah-tanveer-2008/MultiSystemSoftware/main/logo.png" alt="Multi System Software Logo" class="brand-logo">
+                    <img src="images/logo.png" alt="Multi System Software Logo" class="brand-logo">
                     <span class="brand-text">Multi System Software</span>
                 </a>
                 <p class="footer-desc">
@@ -607,9 +658,50 @@
     <i class="bi bi-arrow-up"></i>
 </button>
 
-<!-- Bootstrap JS -->
+<!-- ================= PRESENTATION MODAL ================= -->
+<div class="modal fade presentation-modal" id="presentationModal" tabindex="-1" aria-labelledby="presentationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="presentationModalLabel">
+                    <i class="bi bi-images me-2"></i>
+                    <span id="modalSoftwareName">Software</span> — Presentation
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="presentationCarousel" class="carousel slide" data-bs-ride="false" data-bs-interval="false">
+                    <div class="carousel-indicators" id="carouselIndicators"></div>
+                    <div class="carousel-inner" id="carouselInner"></div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#presentationCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#presentationCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <div class="presentation-info text-center mt-3">
+                    <p class="mb-0">
+                        <i class="bi bi-info-circle me-1"></i>
+                        Use arrows or swipe to see more screenshots
+                    </p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-custom" data-bs-dismiss="modal">
+                    <i class="bi bi-x-lg me-1"></i> Close
+                </button>
+                <a href="#" id="modalRequestDemoBtn" class="btn btn-primary-custom" target="_blank" rel="noopener">
+                    <i class="bi bi-send-fill me-1"></i> Request Demo
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Custom JS -->
 <script src="script.js"></script>
 
 </body>
