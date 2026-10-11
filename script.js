@@ -34,7 +34,6 @@ function updateThemeIcon(theme) {
 // ================= NAVBAR SCROLL EFFECT =================
 const navbar = document.getElementById('mainNavbar');
 const backToTop = document.getElementById('backToTop');
-let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.scrollY;
@@ -52,7 +51,6 @@ window.addEventListener('scroll', () => {
     }
     
     updateActiveNavLink();
-    lastScroll = currentScroll;
 }, { passive: true });
 
 // ================= BACK TO TOP =================
@@ -93,7 +91,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             const offsetTop = target.offsetTop - 80;
             window.scrollTo({ top: offsetTop, behavior: 'smooth' });
             
-            // Close mobile menu
             const navbarCollapse = document.getElementById('navMenu');
             if (navbarCollapse && navbarCollapse.classList.contains('show')) {
                 const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
@@ -173,7 +170,6 @@ let resizeTimer;
 window.addEventListener('resize', () => {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(() => {
-        // Close mobile menu on resize to desktop
         if (window.innerWidth >= 992) {
             const navbarCollapse = document.getElementById('navMenu');
             if (navbarCollapse && navbarCollapse.classList.contains('show')) {
