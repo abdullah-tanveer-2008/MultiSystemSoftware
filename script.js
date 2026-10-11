@@ -3,7 +3,6 @@ const themeToggle = document.getElementById('themeToggle');
 const themeIcon = document.getElementById('themeIcon');
 const htmlElement = document.documentElement;
 
-// Check saved theme or system preference
 const savedTheme = localStorage.getItem('theme');
 const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
@@ -35,22 +34,26 @@ function updateThemeIcon(theme) {
 // ================= NAVBAR SCROLL EFFECT =================
 const navbar = document.getElementById('mainNavbar');
 const backToTop = document.getElementById('backToTop');
+let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
+    const currentScroll = window.scrollY;
+    
+    if (currentScroll > 50) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
     }
     
-    if (window.scrollY > 400) {
+    if (currentScroll > 400) {
         backToTop.classList.add('show');
     } else {
         backToTop.classList.remove('show');
     }
     
     updateActiveNavLink();
-});
+    lastScroll = currentScroll;
+}, { passive: true });
 
 // ================= BACK TO TOP =================
 backToTop.addEventListener('click', () => {
@@ -64,7 +67,7 @@ function updateActiveNavLink() {
     
     let current = '';
     sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
+        const sectionTop = section.offsetTop - 120;
         if (window.scrollY >= sectionTop) {
             current = section.getAttribute('id');
         }
@@ -92,8 +95,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             
             // Close mobile menu
             const navbarCollapse = document.getElementById('navMenu');
-            if (navbarCollapse.classList.contains('show')) {
-                bootstrap.Collapse.getInstance(navbarCollapse)?.hide();
+            if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+                const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+                if (bsCollapse) bsCollapse.hide();
             }
         }
     });
@@ -111,8 +115,6 @@ if (contactForm) {
         btn.innerHTML = '<i class="bi bi-hourglass-split me-2"></i>Sending...';
         btn.disabled = true;
         
-        // Filhaal WhatsApp par redirect kar rahe hain
-        // Baad mein backend ya email service laga sakte hain
         setTimeout(() => {
             const formData = new FormData(contactForm);
             const name = formData.get('name');
@@ -154,11 +156,11 @@ const observer = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             entry.target.style.opacity = '1';
             entry.target.style.transform = 'translateY(0)';
+            observer.unobserve(entry.target);
         }
     });
 }, observerOptions);
 
-// Apply animation to cards
 document.querySelectorAll('.software-card, .contact-info-card, .about-feature').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
@@ -166,7 +168,23 @@ document.querySelectorAll('.software-card, .contact-info-card, .about-feature').
     observer.observe(el);
 });
 
+// ================= WINDOW RESIZE HANDLER =================
+let resizeTimer;
+window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+        // Close mobile menu on resize to desktop
+        if (window.innerWidth >= 992) {
+            const navbarCollapse = document.getElementById('navMenu');
+            if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+                const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+                if (bsCollapse) bsCollapse.hide();
+            }
+        }
+    }, 250);
+});
+
 // ================= CONSOLE MESSAGE =================
-console.log('%cMulti System Softwares', 'font-size: 20px; font-weight: bold; color: #2563eb;');
+console.log('%cMulti System Software', 'font-size: 20px; font-weight: bold; color: #3DAD57;');
 console.log('%cWebsite Loaded Successfully! 🚀', 'font-size: 14px; color: #10b981;');
 console.log('%cRahim Yar Khan, Pakistan | +92 321 6714824', 'font-size: 12px; color: #94a3b8;');
